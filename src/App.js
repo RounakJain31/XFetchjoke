@@ -20,7 +20,7 @@ export default function App() {
       const data = await response.json();
       setJoke(`${data.setup} ${data.punchline}`);
     } catch (err) {
-      setError("Oops!! Error in fetching joke...");
+      setError("Could not fetch a joke. Try again.");
     } finally {
       setLoading(false);
     }
@@ -28,10 +28,10 @@ export default function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "30px" }}>
-      <h2>Random Joke Generator</h2>
+      <h2>Random JokeS</h2>
 
       {joke && !error && <p>{joke}</p>}
-      {!joke && !error && <p>Click on the button to fetch a joke!</p>}
+      {!joke && !error && <p>Click the button to fetch a fresh one.</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       <button onClick={fetchJoke} disabled={loading}>
