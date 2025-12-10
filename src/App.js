@@ -28,7 +28,7 @@ export default function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "30px" }}>
-      <h2>Random JokeS</h2>
+      <h2>Random Joke</h2>
 
       {joke && !error && <p>{joke}</p>}
       {!joke && !error && <p>Click the button to fetch a fresh one.</p>}
