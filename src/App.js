@@ -34,9 +34,16 @@ export default function App() {
       {!joke && !error && <p>Click the button to fetch a fresh one.</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
-      <button onClick={fetchJoke} disabled={loading}>
+      {/* <button onClick={fetchJoke} disabled={loading}>
         {loading ? "Fetching..." : "Fetch joke"}
-      </button>
+      </button> */}
+      <button onClick={fetchJoke} disabled={loading}>
+  {loading
+    ? "Fetching..."
+    : error
+    ? "Try again"
+    : "Fetch joke"}
+</button>
     </div>
   );
 }
