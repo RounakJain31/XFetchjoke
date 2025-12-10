@@ -28,14 +28,14 @@ export default function App() {
 
   return (
     <div style={{ textAlign: "center", marginTop: "30px" }}>
-      <h2>Random Joke</h2>
+      <h1>Random Joke</h1>
 
       {joke && !error && <p>{joke}</p>}
       {!joke && !error && <p>Click the button to fetch a fresh one.</p>}
       {error && <p style={{ color: "red" }}>{error}</p>}
 
       <button onClick={fetchJoke} disabled={loading}>
-        {loading ? "Fetching..." : "Fetch Joke"}
+        {loading ? "Fetching..." : "Fetch joke"}
       </button>
     </div>
   );
